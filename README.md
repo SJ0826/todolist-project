@@ -1,9 +1,18 @@
+[![.github/workflows/CICD.yml](https://github.com/SJ0826/todolist-project/actions/workflows/CICD.yml/badge.svg)](https://github.com/SJ0826/todolist-project/actions/workflows/CICD.yml)
+
 ## 사용 라이브러리 및 툴
 
+- yarn
 - CRA
 - typescript
 - SASS
 - 리덕스
+
+## 배포링크
+
+AWSS3 + githubActions
+
+[배포링크](http://todolist-sj0826.s3-website.ap-northeast-2.amazonaws.com)
 
 ## 기본 세팅
 
