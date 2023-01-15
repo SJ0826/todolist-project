@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+## 사용 라이브러리 및 툴
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- CRA
+- typescript
+- SASS
+- 리덕스
 
-## Available Scripts
+## 기본 세팅
 
-In the project directory, you can run:
+- [] CI/CD 파이프라인 구축하기
+- [] eslint, pritter, husky 적용하기
+- [] eslint에 import/export 규칙 설정하기
 
-### `npm start`
+## 회원가입/로그인 페이지
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 이메일/비밀번호 유효성 검사
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [] 이메일 조건: '@`포함, 비밀번호 조건: 8자 이상
+- [] 이메일과 비밀번호의 조건이 만족할 때만 버튼 활성화
+- [] 이메일/비밀번호 유효성 검사는 테스트 코드로 해보기
 
-### `npm test`
+### 로그인/회원가입 API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [] 로그인/회원가입 API를 호출해서 올바른 응답시 /todo경로로 이동
+- [] 로그인/회원가입 성공시 응답받은 JWT를 로컬 스토리지에 저장
 
-### `npm run build`
+### 로그인 여부에 따른 리다이렉트 처리
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [] 로컬 스토리지에 토큰 있는 상태로 / 페이지에 접속시, /todo경로로 이동
+- [] 로컬 스토리지에 토큰이 없는 상태로 /todo페이지에 접속시, /경로로 이동
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 투두리스트 페이지
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [] /todo경로에 접속하면 투두리스트로 이동
+- [] 투두리스트 페이지에 투두리스트의 내용과 완료 여부 표시
 
-### `npm run eject`
+### 투두리스트 추가/수정/삭제
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [] 투두리스트 페이지에 입력창과 추가버튼이 있고, 추가 버튼을 누르면 입력창의 내용이 투두리스트에 추가
+- [] 투두아이템 우측에 수정버튼을 추가하고 클릭시 수정모드 활성화
+- [] 수정모드에서 투두아이템 우측에 제출버튼과 취소버튼 추가하고 클릭시 수정 내용 제출 및 수정모드 취소
+- [] 투두아이템 우측에 삭제버튼 추가하고 버튼 클릭시 해당 투두 아이템 삭제
