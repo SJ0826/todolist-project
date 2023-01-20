@@ -1,8 +1,7 @@
-import "./App.css";
+import './App.css';
 
 function App() {
-  const a = "test";
-  return <div>testtest</div>;
+	return <div>testtest</div>;
 }
 
 export default App;

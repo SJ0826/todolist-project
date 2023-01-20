@@ -12,15 +12,38 @@
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "airbnb",
-    "airbnb/hooks"
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "prettier"
   ],
   "rules": {
-    "no-var": "error",
-    "no-multiple-empty-lines": "error",
-    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
-    "eqeqeq": "error",
-    "no-unused-vars": "warn",
-    "no-undef": "warn",
-    "import/prefer-default-export": "off"
+    "no-console": "warn",
+    "no-plusplus": "off",
+    "no-shadow": "off",
+    "vars-on-top": "off",
+    "no-underscore-dangle": "off", // var _foo;
+    "func-names": "off", // setTimeout(function () {}, 0);
+    "prefer-arrow-callback": "error", // Require using arrow functions for callbacks
+    "prefer-template": "off",
+    "no-nested-ternary": "off",
+    "max-classes-per-file": "off",
+    "wrap-iife": ["error", "inside"],
+    "arrow-parens": "off", // a => {}
+    "no-restricted-syntax": [0, "ForOfStatement"], // disallow specified syntax(ex. WithStatement)
+    "no-param-reassign": ["error", { "props": false }],
+    "require-await": "error",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/react-in-jsx-scope": "off",
+    "no-use-before-define": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "class-methods-use-this": "off",
+    "arrow-body-style": "off",
+    "no-unused-expressions": "off",
+    "no-unused-vars": "off",
+    "import/prefer-default-export": "off",
+    "no-useless-catch": "off",
+    "no-alert": "off",
+    "import/order": "off"
   }
 }
