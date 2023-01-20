@@ -16,7 +16,7 @@ AWSS3 + githubActions
 
 ## 기본 세팅
 
-- [] CI/CD 파이프라인 구축하기
+- [x] CI/CD 파이프라인 구축하기
 - [] eslint, pritter, husky 적용하기
 - [] eslint에 import/export 규칙 설정하기
 
