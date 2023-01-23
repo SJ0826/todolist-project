@@ -46,6 +46,7 @@
     "no-alert": "off",
     "import/order": "off",
     "strict":"off",
-    "import/no-import-module-exports": "off"
+    "import/no-import-module-exports": "off",
+    "@typescript-eslint/no-use-before-define": "off"
   }
 }
