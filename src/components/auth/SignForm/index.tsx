@@ -47,7 +47,7 @@ function SignForm() {
 				id="password"
 				type="password"
 				value={user.password}
-				warningText={validation.email || user.password.length === 0 ? '' : '비밀번호는 8자 이상입니다.'}
+				warningText={validation.password || user.password.length === 0 ? '' : '비밀번호는 8자 이상입니다.'}
 				onChange={onChangeInput}
 			/>
 			<S.SubmitBtn type="submit" disabled={isValidation} bgColor={theme.btnColor} />
