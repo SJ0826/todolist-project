@@ -1,4 +1,4 @@
-import { SIGN_IN, SIGN_UP, TOGGE_TEXT } from '../../../lib/constants';
+import { SIGN_IN, SIGN_UP, TOGGE_TEXT } from '../../../lib/constants/constants';
 import { theme } from '../../../styles/theme';
 import * as S from './styles';
 
