@@ -6,4 +6,4 @@ export const theme = {
 	inValidColor: '#ffcbd1',
 	textColor: 'black',
 	grey: 'rgba(0,0,0,0.3)',
-};
+}

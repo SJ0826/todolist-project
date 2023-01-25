@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div<{ bgColor: string }>`
 	width: 100vw;
@@ -8,7 +8,7 @@ export const Container = styled.div<{ bgColor: string }>`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-`;
+`
 export const FormWrapper = styled.div`
 	width: 70%;
 	height: 80%;
@@ -19,10 +19,10 @@ export const FormWrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	position: relative;
-`;
+`
 
 export const Title = styled.h1`
 	font-size: 32px;
 	font-weight: 600;
 	margin-bottom: 10px;
-`;
+`

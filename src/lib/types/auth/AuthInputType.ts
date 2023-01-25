@@ -1,3 +1,3 @@
 export type AuthInputType = {
-	[key: string]: string;
-};
+	[key: string]: string
+}

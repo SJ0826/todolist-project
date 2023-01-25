@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Form = styled.form`
 	display: flex;
 	flex-direction: column;
 	width: 70%;
 	gap: 30px;
-`;
+`
 
 export const SubmitBtn = styled.input<{ bgColor: string }>`
 	border: none;
@@ -19,4 +19,4 @@ export const SubmitBtn = styled.input<{ bgColor: string }>`
 	&:disabled {
 		opacity: 0.4;
 	}
-`;
+`

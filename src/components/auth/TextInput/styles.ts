@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
 	display: flex;
-`;
+`
 export const InputLabel = styled.span`
 	font-size: 14px;
-`;
+`
 
 export const Input = styled.input`
 	width: 49vw;
@@ -19,7 +19,7 @@ export const Input = styled.input`
 	:invalid {
 		background-color: #eff5f5;
 	}
-`;
+`
 
 export const ErrorMessage = styled.div<{ isError: boolean }>`
 	margin-top: 7px;
@@ -27,4 +27,4 @@ export const ErrorMessage = styled.div<{ isError: boolean }>`
 	display: ${(props) => (props.isError ? 'block' : 'none')};
 	font-size: 12px;
 	color: #d21111;
-`;
+`

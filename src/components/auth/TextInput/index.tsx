@@ -1,12 +1,12 @@
-import { ChangeEvent, memo } from 'react';
-import * as S from './styles';
+import { ChangeEvent, memo } from 'react'
+import * as S from './styles'
 
 interface Props {
-	id: string;
-	type: 'email' | 'password';
-	value: string;
-	warningText: string;
-	onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+	id: string
+	type: 'email' | 'password'
+	value: string
+	warningText: string
+	onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 function TextInput({ id, type, value, warningText, onChange }: Props) {
@@ -19,7 +19,7 @@ function TextInput({ id, type, value, warningText, onChange }: Props) {
 				<S.ErrorMessage isError={!!warningText}>{warningText}</S.ErrorMessage>
 			</S.InputLabel>
 		</S.Container>
-	);
+	)
 }
 
-export default memo(TextInput);
+export default memo(TextInput)

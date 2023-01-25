@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const ToggleButton = styled.div<{ bgColor: string }>`
 	background-color: ${(props) => props.bgColor};
@@ -8,9 +8,9 @@ export const ToggleButton = styled.div<{ bgColor: string }>`
 	top: 20px;
 	right: 20px;
 	cursor: pointer;
-`;
+`
 
 export const ToggleText = styled.span`
 	font-size: 14px;
 	color: white;
-`;
+`
