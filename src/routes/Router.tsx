@@ -1,5 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
+import PrivateRoute from './PrivateRouter'
+import PublicRoute from './PublicRoute'
 
 function Router() {
 	const Auth = lazy(() => import('../pages/Auth'))
@@ -14,7 +16,9 @@ function Router() {
 				path="/"
 				element={
 					<Suspense fallback={loading()}>
-						<Auth />
+						<PublicRoute>
+							<Auth />
+						</PublicRoute>
 					</Suspense>
 				}
 			/>
@@ -22,7 +26,9 @@ function Router() {
 				path="/todo"
 				element={
 					<Suspense fallback={loading()}>
-						<Todo />
+						<PrivateRoute>
+							<Todo />
+						</PrivateRoute>
 					</Suspense>
 				}
 			/>
