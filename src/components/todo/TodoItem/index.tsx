@@ -38,7 +38,7 @@ function TodoItem({ id, todo, isCompleted }: TodoParam) {
 			/>
 			<S.Btns>
 				<S.Btn onClick={onClickCompleteEditButton}>확인</S.Btn>
-				<S.Btn onClick={onClickDeleteButton}>취소</S.Btn>
+				<S.Btn onClick={() => setIsEditMode(false)}>취소</S.Btn>
 			</S.Btns>
 		</S.TodoContainer>
 	) : (
