@@ -20,7 +20,6 @@ abstract class HttpClient {
 	}
 
 	private _handleRequest = (config: AxiosRequestConfig | any) => {
-		// FIXME: config 타입 설정하기
 		const accessToken = getLocalStorageToken()
 		if (accessToken && config.headers) {
 			config.headers.Authorization = `Bearer ${accessToken}`

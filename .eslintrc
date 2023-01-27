@@ -48,6 +48,8 @@
     "strict":"off",
     "import/no-import-module-exports": "off",
     "@typescript-eslint/no-use-before-define": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "@typescript-eslint/default-param-last": "off",
+    "react-hooks/exhaustive-deps": "off"
   }
 }

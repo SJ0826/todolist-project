@@ -47,13 +47,11 @@ function SignForm({ signState, setSignState }: Props) {
 	const onSubmitUserForm = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
 		if (signState === SIGN_IN) {
-			console.log(await authApi.SignIn(formData))
 			const token = await authApi.SignIn(formData)
 			setLocalStorageToken(token.data.access_token)
 			navigate('/todo')
 		}
 		if (signState === SIGN_UP) {
-			console.log(await authApi.SignUp(formData))
 			setSignState(SIGN_IN)
 		}
 	}
