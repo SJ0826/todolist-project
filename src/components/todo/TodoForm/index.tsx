@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, memo, useRef, useState } from 'react'
+import { ChangeEvent, FormEvent, memo, useCallback, useRef, useState } from 'react'
 import * as S from './styles'
 import { useDispatch } from 'react-redux'
 import { createTodo } from '../../../lib/store/todoStore'
@@ -9,22 +9,28 @@ function TodoForm() {
 	const [inputValue, setInputValue] = useState<string>('')
 	const inputRef = useRef<HTMLInputElement>(null)
 
-	const onChangeHandler = (e: ChangeEvent<HTMLElement>) => {
-		const { value } = e.target as HTMLInputElement
-		setInputValue(value)
-	}
+	const onChangeHandler = useCallback(
+		(e: ChangeEvent<HTMLElement>) => {
+			const { value } = e.target as HTMLInputElement
+			setInputValue(value)
+		},
+		[inputValue]
+	)
 
-	const onSubmitHandler = async (e: FormEvent<HTMLFormElement>) => {
-		e.preventDefault()
-		const response = await todoApi.addTodoAPI(inputValue)
-		dispatch(createTodo(response.data))
-		if (inputRef.current) {
-			inputRef.current.value = ''
-		}
+	const onSubmitHandler = useCallback(
+		async (e: FormEvent<HTMLFormElement>) => {
+			e.preventDefault()
+			const response = await todoApi.addTodoAPI(inputValue)
+			dispatch(createTodo(response.data))
+			if (inputRef.current) {
+				inputRef.current.value = ''
+			}
 
-		inputRef.current?.focus()
-		setInputValue('')
-	}
+			inputRef.current?.focus()
+			setInputValue('')
+		},
+		[inputValue]
+	)
 
 	return (
 		<S.Form onSubmit={onSubmitHandler}>
