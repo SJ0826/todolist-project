@@ -3,7 +3,7 @@ import { todoApi } from '../../../lib/api/todo/todoAPI'
 import { TodoParam } from '../../../lib/types/todo/TodoInterface'
 import * as S from './styles'
 import { ChangeEvent, memo, useState } from 'react'
-import { deleteTodo, updateTodo } from '../../../lib/store/todoStore'
+import { deleteTodo, doneTodo, updateTodo } from '../../../lib/store/todoStore'
 
 function TodoItem({ id, todo, isCompleted }: TodoParam) {
 	const dispatch = useDispatch()
@@ -19,6 +19,11 @@ function TodoItem({ id, todo, isCompleted }: TodoParam) {
 		const response = await todoApi.updateTodoAPI(id, editedText, false)
 		dispatch(updateTodo(response.data))
 		setIsEditMode(false)
+	}
+
+	const onClickDoneButton = async () => {
+		await todoApi.updateTodoAPI(id, todo, !isCompleted)
+		dispatch(doneTodo(id))
 	}
 
 	return isEditMode ? (
@@ -38,7 +43,7 @@ function TodoItem({ id, todo, isCompleted }: TodoParam) {
 		</S.TodoContainer>
 	) : (
 		<S.TodoContainer>
-			<S.TodoCheckbox type="checkbox" />
+			<S.TodoCheckbox type="checkbox" checked={isCompleted} onChange={onClickDoneButton} />
 			<S.TodoText isCompleted={isCompleted}>{todo}</S.TodoText>
 			<S.Btns>
 				<S.Btn onClick={() => setIsEditMode(!isEditMode)}>수정</S.Btn>

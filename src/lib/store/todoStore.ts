@@ -4,6 +4,7 @@ export const GET_TODOS = 'todo/getTodos' as const
 export const CREATE_TODO = 'todo/createTodo' as const
 export const DELETE_TODO = 'todo/deleteTodo' as const
 export const UPDATE_TODO = 'todo/updateTodo' as const
+export const DONE_TODO = 'todo/doneTodo' as const
 
 export const initialState: TodoParam[] = []
 
@@ -35,12 +36,20 @@ export const updateTodo = (data: TodoParam) => {
 	}
 }
 
+export const doneTodo = (id: number) => {
+	return {
+		type: DONE_TODO,
+		payload: id,
+	}
+}
+
 // 액션 타입 정의
 type TodoActionType =
 	| ReturnType<typeof getTodos>
 	| ReturnType<typeof createTodo>
 	| ReturnType<typeof deleteTodo>
 	| ReturnType<typeof updateTodo>
+	| ReturnType<typeof doneTodo>
 
 // reducer
 const todoReducer = (state: TodoParam[] = initialState, action: TodoActionType) => {
@@ -55,6 +64,8 @@ const todoReducer = (state: TodoParam[] = initialState, action: TodoActionType) 
 			return state.map((todo) =>
 				todo.id === action.payload.id ? { ...todo, todo: action.payload.todo, isCompleted: false } : todo
 			)
+		case DONE_TODO:
+			return state.map((todo) => (todo.id === action.payload ? { ...todo, isCompleted: !todo.isCompleted } : todo))
 		default:
 			return state
 	}

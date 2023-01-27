@@ -51,6 +51,7 @@
     "import/no-extraneous-dependencies": "off",
     "@typescript-eslint/default-param-last": "off",
     "react-hooks/exhaustive-deps": "off",
-    "@typescript-eslint/no-unused-expressions": "off"
+    "@typescript-eslint/no-unused-expressions": "off",
+    "@typescript-eslint/no-explicit-any": "warn"
   }
 }
