@@ -23,6 +23,7 @@ abstract class HttpClient {
 		const accessToken = getLocalStorageToken()
 		if (accessToken && config.headers) {
 			config.headers.Authorization = `Bearer ${accessToken}`
+			config.headers['Content-Type'] = `application/json`
 		}
 		return config
 	}

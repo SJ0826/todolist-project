@@ -1,11 +1,11 @@
 import { ChangeEvent, FormEvent, memo, useRef, useState } from 'react'
 import * as S from './styles'
-// import { useDispatch } from 'react-redux'
-// import { createTodo } from '../../../lib/store/todoStore'
+import { useDispatch } from 'react-redux'
+import { createTodo } from '../../../lib/store/todoStore'
 import { todoApi } from '../../../lib/api/todo/todoAPI'
 
 function TodoForm() {
-	// const dispatch = useDispatch()
+	const dispatch = useDispatch()
 	const [inputValue, setInputValue] = useState<string>('')
 	const inputRef = useRef<HTMLInputElement>(null)
 
@@ -17,8 +17,13 @@ function TodoForm() {
 	const onSubmitHandler = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
 		const response = await todoApi.addTodoAPI(inputValue)
-		console.log(response)
-		// dispatch(createTodo())
+		dispatch(createTodo(response.data))
+		if (inputRef.current) {
+			inputRef.current.value = ''
+		}
+
+		inputRef.current?.focus()
+		setInputValue('')
 	}
 
 	return (

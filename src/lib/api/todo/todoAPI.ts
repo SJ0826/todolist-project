@@ -33,9 +33,13 @@ class TodoAPI extends HttpClient {
 
 	public getTodosAPI = () => this.instance.get(TODO_URL)
 
-	public addTodoAPI = (todo: string) => this.instance.post(TODO_URL, todo)
+	public addTodoAPI = (todo: string) => {
+		return this.instance.post(TODO_URL, { todo })
+	}
 
 	public deleteTodoAPI = (id: number) => this.instance.delete(`${TODO_URL}/${id}`)
+
+	// public updateTodoAPI
 }
 
 const todoApi = new TodoAPI()
