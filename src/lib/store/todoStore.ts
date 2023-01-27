@@ -21,8 +21,15 @@ export const createTodo = (data: TodoParam) => {
 	}
 }
 
+export const deleteTodo = (id: number) => {
+	return {
+		type: DELETE_TODO,
+		payload: id,
+	}
+}
+
 // 액션 타입 정의
-type TodoActionType = ReturnType<typeof getTodos> | ReturnType<typeof createTodo>
+type TodoActionType = ReturnType<typeof getTodos> | ReturnType<typeof createTodo> | ReturnType<typeof deleteTodo>
 
 // reducer
 const todoReducer = (state: TodoParam[] = initialState, action: TodoActionType) => {
@@ -31,6 +38,8 @@ const todoReducer = (state: TodoParam[] = initialState, action: TodoActionType) 
 			return action.payload
 		case CREATE_TODO:
 			return [...state, action.payload]
+		case DELETE_TODO:
+			return state.filter((todo) => todo.id !== action.payload)
 		default:
 			return state
 	}
