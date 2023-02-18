@@ -1,18 +1,30 @@
 [![.github/workflows/CICD.yml](https://github.com/SJ0826/todolist-project/actions/workflows/CICD.yml/badge.svg)](https://github.com/SJ0826/todolist-project/actions/workflows/CICD.yml)
+# TodoList Project
+원티드에서 진행한 TodoList과제에 고민하던 부분을 적용하고 참가했던 모든 팀의 Best Practice를 정리해 흡수하기 위해 만들어진 투두리스트 프로젝트 입니다.
 
 ## 사용 라이브러리 및 툴
 
-- yarn
-- CRA
-- typescript
-- Styled Components
-- 리덕스
+<div style="float: left;">
+  <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white">
+  <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white">
+  <img src="https://img.shields.io/badge/React Router Dom-CA4245?style=for-the-badge&logo=react router&logoColor=white">
+  <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white">
+  <img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black">
+  <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white">
+  <img src="https://img.shields.io/badge/Husky-808080?style=for-the-badge&logo=husky&logoColor=white">
+</div>
 
 ## 배포링크
 
-AWSS3 + githubActions
+AWSS3 + githubActions를 통해 CD라인을 구축했습니다.
 
 [배포링크](http://todolist-sj0826.s3-website.ap-northeast-2.amazonaws.com)
+
+## 프로젝트 살펴보기
+
+📖 [위키](https://github.com/SJ0826/todolist-project/wiki)에서 기능 구현에 대한 상세 설명을 확인할 수 있습니다.
 
 ## 기본 세팅
 
