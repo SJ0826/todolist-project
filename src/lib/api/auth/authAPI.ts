@@ -1,4 +1,4 @@
-import { AxiosResponse } from 'axios'
+import { AxiosError, AxiosResponse } from 'axios'
 import { SIGNIN_URL, SIGNUP_URL } from '../../constants/constants'
 import HttpClient from '../httpClient'
 import { UserParam } from '../../types/auth/UserInterface'
@@ -30,9 +30,8 @@ class AuthAPI extends HttpClient {
 		return response
 	}
 
-	protected _handleError = (error: any) => {
-		const { response: errorResponse } = error
-		const errorCode = errorResponse.status
+	protected _handleError = (error: AxiosError) => {
+		const errorCode = error.status
 
 		switch (errorCode) {
 			case 400:

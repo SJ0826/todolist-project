@@ -1,6 +1,6 @@
 import HttpClient from '../httpClient'
 import { TODO_URL } from '../../constants/constants'
-import { AxiosResponse } from 'axios'
+import { AxiosError, AxiosResponse } from 'axios'
 
 class TodoAPI extends HttpClient {
 	public constructor() {
@@ -17,7 +17,7 @@ class TodoAPI extends HttpClient {
 		return response
 	}
 
-	protected _handleError = (error: any) => {
+	protected _handleError = (error: AxiosError) => {
 		const { response: errorResponse } = error
 		const errorCode = error.status
 
