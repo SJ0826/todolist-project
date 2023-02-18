@@ -1,5 +1,6 @@
 import axios, { AxiosInstance, InternalAxiosRequestConfig } from 'axios'
 import { getLocalStorageToken } from '../store/localStorage'
+import { BASE_URL } from '../constants/constants'
 
 declare module 'axios' {
 	type AxiosRequest<T = unknown> = Promise<T>
@@ -7,9 +8,9 @@ declare module 'axios' {
 abstract class HttpClient {
 	protected readonly instance: AxiosInstance
 
-	public constructor(baseURL: string) {
+	public constructor() {
 		this.instance = axios.create({
-			baseURL,
+			baseURL: BASE_URL,
 		})
 
 		this._initializeRequestInterceptor()

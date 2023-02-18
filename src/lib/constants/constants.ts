@@ -13,6 +13,7 @@ export const HOME_TITLE: AuthInputType = {
 	SIGN_IN: '로그인',
 }
 
+export const BASE_URL = 'https://pre-onboarding-selection-task.shop'
 export const SIGNUP_URL = '/auth/signup'
 export const SIGNIN_URL = '/auth/signin'
 export const TODO_URL = '/todos'

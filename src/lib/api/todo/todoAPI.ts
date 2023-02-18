@@ -4,7 +4,7 @@ import { AxiosError, AxiosResponse } from 'axios'
 
 class TodoAPI extends HttpClient {
 	public constructor() {
-		super('https://pre-onboarding-selection-task.shop')
+		super()
 
 		this._initializeResponseInterceptor()
 	}

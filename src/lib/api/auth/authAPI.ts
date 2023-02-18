@@ -5,7 +5,7 @@ import { UserParam } from '../../types/auth/UserInterface'
 
 class AuthAPI extends HttpClient {
 	public constructor() {
-		super('https://pre-onboarding-selection-task.shop')
+		super()
 
 		this._initializeResponseInterceptor()
 	}
