@@ -62,6 +62,12 @@ a {
   text-decoration:none;
   color:inherit;
 }
+
+button {
+  :hover {
+    cursor: pointer;
+  }
+}
 `
 
 export default GlobalStyle

@@ -22,3 +22,17 @@ export const Title = styled.h1`
 	margin-bottom: 30px;
 	margin-top: 30px;
 `
+export const Logout = styled.button`
+	width: 5rem;
+	height: 2rem;
+
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+
+	font-size: 0.8rem;
+	color: white;
+
+	border: none;
+	background: ${(props) => props.theme.btnColor};
+`

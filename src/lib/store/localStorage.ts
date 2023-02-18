@@ -7,3 +7,7 @@ export const getLocalStorageToken = () => {
 export const setLocalStorageToken = (token: string) => {
 	return localStorage.setItem(USER_KEY, token)
 }
+
+export const removeStorageToken = () => {
+	return localStorage.removeItem(USER_KEY)
+}

@@ -5,5 +5,5 @@ export const theme = {
 	btnColor: '#497174',
 	inValidColor: '#ffcbd1',
 	textColor: 'black',
-	grey: 'rgba(0,0,0,0.3)',
+	gray: 'rgba(0,0,0,0.3)',
 }
