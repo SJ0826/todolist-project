@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/Husky-808080?style=for-the-badge&logo=husky&logoColor=white">
 </div>
 
-## 배포링크
+## 프로젝트 확인하기
 
 AWSS3 + githubActions를 통해 CD라인을 구축했습니다.
 
