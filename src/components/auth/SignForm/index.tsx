@@ -49,10 +49,13 @@ function SignForm({ signState, setSignState }: Props) {
 		if (signState === SIGN_IN) {
 			const token = await authApi.SignIn(formData)
 			setLocalStorageToken(token.data.access_token)
+			setFormData(initialForm)
 			navigate('/todo')
 		}
 		if (signState === SIGN_UP) {
+			await authApi.SignUp(formData)
 			setSignState(SIGN_IN)
+			setFormData(initialForm)
 		}
 	}
 
